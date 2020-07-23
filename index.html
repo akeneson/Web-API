@@ -3,6 +3,8 @@
 
 <head>
     <meta charset="UTF-8" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+        integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Web API</title>
@@ -12,6 +14,39 @@
 
 
 <body>
+    <div class="wrapper">
+        <header>
+            <h1>Web API</h1>
+        </header>
+        <div class="card">
+            <div class="card-header">
+                <h3>Unit 4 Web API Quiz</h3>
+                <!-- ATTENTION: NEED TIMER DISPLAYED TO THE RIGHT CORNER OF CARD -->
+                <!-- Timer display -->
+                <div class="timerScores">
+                    <div class="time">
+                        <h3 id="timer"> 60 seconds </h3>
+                    </div>
+                    <!-- ATTENTION: NEED VIEW SCORES LINK TO THE LEFT CORDER OF CARD -->
+                    <!-- View High Scores -->
+                    <div class="highscores">
+                        <h3 id="highscores">View Highscores</h3>
+                    </div>
+                </div>
+            </div>
+            <div class="card-body">
+                <div class="questionDisplay" id="questionDisplay"> Questions will display here.
+                </div>
+            </div>
+            <div class="card-footer">
+                <div class="answer" id="answer"></div>
+            </div>
+        </div>
+    </div>
+
+
+
+
     <script src="Assets/script.js"></script>
 </body>
 
