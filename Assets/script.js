@@ -13,8 +13,6 @@ function startTimer(){
 
 
 
-// View High Scores Variable
-var viewScores = document.querySelector("#ViewScores");
 // QUESTION DISPLAY BOX
 var questionDisplay = document.querySelector("#questionDisplay");
 // ANSWER DISPLAY BOX
@@ -53,13 +51,11 @@ function startQuiz(){
 
 
 // click starts the quiz
-startButton.addEventListener("click", function(){
-    console.log("start quiz button works");
-  // starts timer
-    startTimer();
-  // starts quiz 
-    startQuiz();
-})
+$("#startQuiz").on("click", function(){
+  console.log("Start Quiz button works");
+  startTimer();
+  startQuiz();
+});
 
 // array of people
 var people =[{name:"Amy"}];
