@@ -1,6 +1,7 @@
 html, body{
     background-color: gray;
     padding: 20px;
+    color: gray;
 }
 
 .wrapper {
@@ -10,19 +11,22 @@ html, body{
 }
 .nav-item, 
 .time,
-.timer{
+.timer
+.seconds{
     background-color: white;
     color: gray;
 }
 .card-header{
     border: none;
     background-color: white;
+    margin: 10;
 }
 .card-body{
     background-color: white;
     color: gray;
     border: 2px dashed #c0c7cf;
     border-radius: 6px;
+    margin: 10px;
 }
 .card-footer{
     border:none;
@@ -32,7 +36,38 @@ html, body{
 /* hover style over wrong answers
 /* hover style over right answers */
 
-/* .question1{
+.question1{
     display:none;
     visibility: hidden;
-} */
+}
+
+.startQuiz {
+    border: none;
+    background-color: lightblue;
+    border-radius: 25px;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 6px 0px rgba(0, 0, 0, 0.2) 0px 1px 1px
+      0px;
+    color: hsl(0, 0%, 100%);
+    display: inline-block;
+    font-size: 22px;
+    line-height: 22px;
+    margin: 16px 16px 16px 20px;
+    padding: 14px 34px;
+    text-align: center;
+    cursor: pointer;
+}
+.button {
+    border: none;
+    background-color: lightblue;
+    border-radius: 25px;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 6px 0px rgba(0, 0, 0, 0.2) 0px 1px 1px
+      0px;
+    color: hsl(0, 0%, 100%);
+    display: inline-block;
+    font-size: 22px;
+    line-height: 22px;
+    margin: 16px 16px 16px 20px;
+    padding: 14px 34px;
+    text-align: center;
+    cursor: pointer;
+}
