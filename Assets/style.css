@@ -8,7 +8,9 @@ html, body{
     padding: 70px;
     text-align: center;
 }
-.nav-item{
+.nav-item, 
+.time,
+.timer{
     background-color: white;
     color: gray;
 }
@@ -25,4 +27,11 @@ html, body{
 .card-footer{
     border:none;
     background-color: white;
+}
+
+/* hover style over wrong answers
+/* hover style over right answers */
+
+.question1.hidden{
+    display:none
 }
