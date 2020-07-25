@@ -4,8 +4,12 @@ var question = document.querySelector("#questionDisplay");
 // ANSWER DISPLAY BOX
 var answer = document.querySelector("#answer");
 
+
 // start button
 var startButton = document.querySelector("#startQuiz");
+
+// card-body
+var cardBody = document.querySelector("#card-body");
 
 var grade = 0;
 
@@ -48,17 +52,25 @@ var questionBank = [
     }
 ]
 
-function startQuiz(){
+
+function displayQuestion(){
+    question.textContent="none";
+    for (i=0; i<questionBank.length; i++){
+        console.log("loop for questions working");
+        question.textContent=questionBank[i];
+    }
+    return;
+
+}
+
+
+// click starts the quiz
+startButton.addEventListener("click", function(){
     console.log("start quiz button works");
-}
-
-startButton.addEventListener("click", startQuiz());
-
+    displayQuestion();
+})
 
 
-for (i=0; i<6; i++){
-    console.log("loop for questions working");
-}
 
 if (answer){
     console.log("answer if statement working");
