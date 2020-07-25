@@ -32,6 +32,7 @@ html, body{
 /* hover style over wrong answers
 /* hover style over right answers */
 
-.question1.hidden{
-    display:none
-}
+/* .question1{
+    display:none;
+    visibility: hidden;
+} */

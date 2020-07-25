@@ -1,5 +1,6 @@
 // Grabbing seconds
 var secondsDisplay = document.querySelector("#seconds");
+var question1 = document.querySelector("question1");
 var totalSeconds = 0;
 var secondsElapsed = 0;
 var interval;
@@ -9,7 +10,6 @@ function startTimer(){
   console.log(secondsElapsed);
   // i just really need seconds elapsed from 60 seconds
 }
-
 
 
 
@@ -31,7 +31,7 @@ function startQuiz(){
   // step 1: clear question
   
   // step 2: display question
-  questionDisplay.replaceWith("Question and answer 1 here");
+  questionDisplay.replaceWith("question1 displays here");
     // maybe add a show(question1);
   // step 3: addEventListener("hover",value 2);
     // footer shows correct();
@@ -41,6 +41,7 @@ function startQuiz(){
     // next question();
     // score = score+20;
     // store score
+  // clear screen
   // step 6: addEeventLister("click, value 1,3,4");
     // -10 seconds off timer();
     // no change to score
@@ -76,11 +77,12 @@ function addPersonToList(event){
     console.log(peopleListEl);
 }
 
-// View High Scores
-viewScores.addEventListener("click", function(){
-    event.preventDefault();
-    question.textContent=("View High Scores")
-});
 
+
+// View High Scores
+$("#ViewScores").on("click", function(){
+  event.preventDefault();
+  questionDisplay.replaceWith("View High Scores");
+});
 
 // --------------------------------------------------
