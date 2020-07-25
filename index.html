@@ -10,6 +10,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Web API</title>
     <link rel="stylesheet" href="./Assets/style.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 </head>
 
 
@@ -34,7 +35,11 @@
                 <!-- ATTENTION: NEED TIMER DISPLAYED TO THE RIGHT CORNER OF CARD -->
                 <!-- Timer display -->
                         <li class="nav-link">
-                            <a id="timer">Timer: </a>
+                            <a id="timer">Timer: 
+                                <span id="seconds">60</span>
+                                
+
+                            </a>
                         </li>
                     </ul>
                 </nav>
@@ -44,6 +49,9 @@
 
                 <div class="questionDisplay" id="questionDisplay"> Try to answer the following code-related question within the time limit. Keep in mind that correct answers will penalize your score by 10 seconds.
                 <br><button class="startQuiz" id="startQuiz">Start</button>
+
+            
+
                     
                 </div>
             </div>

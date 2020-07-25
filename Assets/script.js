@@ -1,3 +1,27 @@
+
+// ATTENTION: TIMER DOES NOT WORK
+var timer = document.querySelector("#timer");
+var seconds= document.querySelector("seconds");
+// array of seconds to 
+
+var secondsLeft = setInterval(60,0);
+
+function startTimer(){
+    secondsLeft--;
+    if (secondsLeft<0){
+        // needs to stop quiz
+        console.log("out of time");
+        return;
+    } else{
+        document.getElementById('seconds').innerHTML=secondsLeft + " seconds";
+    }
+}
+
+
+
+// View High Scores Variable
+var viewScores = document.querySelector("#ViewScores");
+
 // QUESTION DISPLAY BOX
 var question = document.querySelector("#questionDisplay");
 
@@ -57,12 +81,12 @@ function displayQuestion(){
     question.textContent="none";
     for (i=0; i<questionBank.length; i++){
         console.log("loop for questions working");
-        question.textContent=questionBank[i];
+        // I need to display the object in the array
+
     }
     return;
 
 }
-
 
 // click starts the quiz
 startButton.addEventListener("click", function(){
@@ -70,6 +94,26 @@ startButton.addEventListener("click", function(){
     displayQuestion();
 })
 
+// array of people
+var people =[{name:"Amy"}];
+var currentID = 0;
+
+function addPersonToList(event){
+    event.preventDefault();
+    var name = nameEntered.value;
+    var li = document.createElement("li");
+    li.id = people.length;
+    li.innerHTML = name + "<button>Add to High Score</button>";
+    people.push({name:name});
+    peopleListEl.append(li);
+}
+
+// View High Scores
+viewScores.addEventListener("click", function(){
+    event.preventDefault();
+    question.textContent=("View High Scores")
+
+});
 
 
 if (answer){
