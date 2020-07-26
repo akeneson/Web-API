@@ -45,7 +45,8 @@ function startQuiz(){
     footer.replaceWith("Pick an answer.");
     questionDisplay.replaceWith("Questions to show here");
     for (i=0; i<questionBank.length; i++){
-        console.log("test");
+        console.log("test " + i);
+
     }
 
     
@@ -96,16 +97,19 @@ function addName(){
     // 2) var highScoreArray = [];
     // 3) add person to array
     // 4) 
-    }
+}
     
-    // View High Scores
-    $("#ViewScores").on("click", function(){
-      event.preventDefault();
-      questionDisplay.replaceWith("View High Scores");
-      // how to display a div class, or an string of html?
-      // is there a function to go back to the main page?
-      // localStorage.setItem(""); PLACE TO LOCAL STRAOGE
+// View High Scores
+
+var viewScores = document.getElementById("ViewScores");
+
+viewScores.addEventListener("click", function(){
+    event.preventDefault();
+    questionDisplay.replaceWith("View High Scores");
+    // how to display a div class, or an string of html?
+    // is there a function to go back to the main page?
+    // localStorage.setItem(""); PLACE TO LOCAL STRAOGE
+
+    footer.replaceWith("");
     
-      footer.replaceWith("");
-      
-    });
+});
