@@ -37,7 +37,7 @@ html, body{
 /* hover style over right answers */
 
 .question1{
-    display:none;
+    display: none;
     visibility: hidden;
 }
 
@@ -56,8 +56,10 @@ html, body{
     text-align: center;
     cursor: pointer;
 }
-.button {
-    border: none;
+
+#button {
+    border: solid;
+    border-color: white;
     background-color: lightblue;
     border-radius: 25px;
     box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 6px 0px rgba(0, 0, 0, 0.2) 0px 1px 1px

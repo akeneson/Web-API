@@ -1,37 +1,31 @@
-// Grabbing seconds
+// Variables for timer
 var secondsDisplay = document.querySelector("#seconds");
 var question1 = document.querySelector("question1");
 var totalSeconds = 60;
 var interval;
 
 function startTimer(){
-    interval = setInterval(()=>{
-      document.getElementById("seconds").textContent =totalSeconds;
-      if (totalSeconds<0){
-        clearInterval(interval);
-      } else {
-        totalSeconds--;
-      }
-    },1000);
+  event.preventDefault();
+  interval = setInterval(()=>{
+  document.getElementById("seconds").textContent =totalSeconds;
+  if (totalSeconds<1){
+    clearInterval(interval);
+    alert("Time is up");
+  } else {
+    totalSeconds--;
+  }
+  },1000);
 }
-//   console.log("startTimer started with start quiz button clicked")
-//   console.log(totalSeconds);
-//   // i just really need seconds elapsed from 60 seconds
-//   for (i=60; i>0; i--){
-//     var SecondsLeft = i;
-//     console.log(SecondsLeft);
-//     $("#seconds").replaceWith(SecondsLeft);
 
-//   }
 //   // when a wrong answer is selected, time -10 seconds ----- make this a function to call and edit the timer
 // }
 
 var gettime = 0;
 function takeTimeOff() {
-
+  // -10 seconds
 }
 function displayTime(){
-  $("#seconds").replaceWith(SecondsLeft);
+  // -10 seconds
 }
 
 var grade = 0;
@@ -39,7 +33,7 @@ var questionNumber=0;
 var rightAnswer = "";
 var userAnswer ="";
 
-var question = [{
+var questionArray = [{
   question: "Commonly used data types do NOT include",
   correct: "Alert",
   choices: ["Boolean","alert", "strings", "numbers"],
@@ -51,34 +45,45 @@ var question = [{
 }
 ];
 
-function startQuiz(){
-  console.log("Start Quiz function works");
-  if (questionNumber<question.length){
-    // selecting number of question in the array of question
-    rightAnswer = question[questionNumber].correct;
-    for (i=0; i<question[questionNumber].choices.length; i++){
-      console.log("for loop for start quiz");
-      let answerButton = document.createElement("button");
-      answerButton.setAttribute("class", "btn-danger m-4 btn answers");
-      answerButton.textContent = question[questionNumber].choices[i];
-      document.getElementById("answers").append(answerButton);
-      document.getElementById("question").innerHTML=question[questionNumber].question;
-    }
-  }else {
-    // save high score
-    // gameover();
-    console.log("game over");
-  }
+// click starts the quiz
+var startQuizButton = document.getElementById("startQuiz");
+var introContainer = document.getElementById("intro");
 
-  document.addEventListener("click", function(event){
-    if (event.target && event.target.matches(".answers")){
-        userAnswer = event.target.textContent;
-        console.log(userAnswer);
-        questionNumber++;
-        startQuiz();
-    }
+startQuizButton.addEventListener("click", function(){
+  console.log("Start Quiz button works");
+  startTimer();
+  startQuiz();
+});
+
+function startQuiz(){
+  console.log("startQuiz Function is working");
+  footer.replaceWith("Pick an answer.");
+
+  // checks to makes sure that startQuiz() keeps running until out of questions
+  if (questionNumber<questionArray.length){
+    console.log("if statement in startQuiz working");
+    // loop for the array to run through all the questions
+    questionDisplay.replaceWith(document.getElementById("question").innerHTML=questionArray[questionNumber].question);
+    console.log("FIRST: DISPLAY QUESTION");
+      // for loop will create all the buttons
+      for (i=0; i<questionArray[questionNumber].choices.length; i++){
+        // SECOND: make buttons for answers
+        rightAnswer = questionArray[questionNumber].correct;
+        let answerButton = document.createElement("button");
+        answerButton.setAttribute("class", "btn-choice m-4 btn", "id=answers");
+        answerButton.textContent = questionArray[questionNumber].choices[i];
+        document.getElementById("answers").append(answerButton);
+        console.log("SECOND: DISPLAY BUTTONS");
+        
+        
+      }
+    
+  }
   
-  });
+}
+
+
+
 
 
   // step 1: clear question
@@ -111,15 +116,7 @@ function startQuiz(){
   // clear button | also make sure this clears localStorage
 
 
-}
 
-
-// click starts the quiz
-$("#startQuiz").on("click", function(){
-  console.log("Start Quiz button works");
-  startTimer();
-  startQuiz();
-});
 
 
 function addName(){
@@ -138,8 +135,6 @@ $("#ViewScores").on("click", function(){
   // is there a function to go back to the main page?
   // localStorage.setItem(""); PLACE TO LOCAL STRAOGE
 
-  answer.replaceWith("Start quiz");
+  footer.replaceWith("");
   
 });
-
-// --------------------------------------------------
