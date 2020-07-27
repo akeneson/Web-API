@@ -7,6 +7,7 @@ var answer = document.getElementById("answers");
 
 var questionBank = [{
     question: "Commonly used data types do NOT include",
+    answer1: "alert",
     choices: ["Alert", "boolean", "strings", "numbers"],
     correctAnswer: "alert"
 },
@@ -59,6 +60,16 @@ function quizQuestions() {
             console.log(questionBank[i].question);
             question.replaceWith(questionBank[i].question);
             var questionNumber = i;
+            let ans1 = answerbutton1.replaceWith(questionBank[i].correctAnswer);
+            console.log(ans1);
+
+
+
+
+
+
+
+
 
             // for every question's answer
             var answerFromQuestionsArray = Array.from(questionBank[i].choices);
