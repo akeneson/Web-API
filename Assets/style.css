@@ -41,6 +41,27 @@ html, body{
 }
 
 
+#answerbutton1,
+#answerbutton2,
+#answerbutton3,
+#answerbutton4{
+    visibility: hidden;
+    border: solid 3px;
+    background-origin: padding-box;
+    background-color: lightblue;
+    border-radius: 25px;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 6px 0px rgba(0, 0, 0, 0.2) 0px 1px 1px
+    0px;
+    color: hsl(0, 0%, 100%);
+    display: inline-block;
+    font-size: 22px;
+    line-height: 22px;
+    margin: 25px;
+    padding: 14px 34px;
+    text-align: center;
+    cursor: pointer;
+}
+
 .startQuiz{
     border: solid 3px;
     background-origin: padding-box;
