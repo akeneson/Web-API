@@ -64,26 +64,9 @@ function quizQuestions() {
             var answerFromQuestionsArray = Array.from(questionBank[i].choices);
 
             for (var i = 0; i < answerFromQuestionsArray.length; i++) {
-                choice = answerFromQuestionsArray[i];
+                var answer1 = answerFromQuestionsArray[i];
                 console.log(answerFromQuestionsArray[i]);
 
-                let answerButton =document.createElement("button");
-
-                answerButton.setAttribute("class", "btn m-4 btn id=answers");
-
-                answerButton.textContent (answerFromQuestionsArray[i]);
-
-                document.getElementById("answers").append(answerButton);
-
-                console.log(answerButton);
-
-
-                console.log(answerFromQuestionsArray[i]);
-                // printable variable
-                var choice = [];
-                choice.push(answerFromQuestionsArray[i]);
-                console.log(choice);
-                // I can NOT get this to show to move forward with the homework
                 
             }
 
