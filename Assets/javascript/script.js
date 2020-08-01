@@ -21,9 +21,8 @@ function startQuiz() {
     console.log("questionSection to show");
     getQuestion();
 
-
     // start timer
-
+    startTimer();
     // show starting time
 
 }
@@ -47,6 +46,42 @@ function getQuestion() {
 
     // display on the page
 }
+
+
+// Variables for timer
+var secondsDisplay = document.querySelector("#time");
+var totalSeconds = 60;
+var interval;
+
+function startTimer() {
+    event.preventDefault();
+    interval = setInterval(() => {
+        secondsDisplay.textContent = totalSeconds;
+        if (totalSeconds < 1) {
+            clearInterval(interval);
+            alert("Time is up");
+        } else {
+            totalSeconds--;
+        }
+    }, 1000);
+}
+
+// when a wrong answer is selected, time -10 seconds ----- make this a function to call and edit the timer
+// 
+
+var gettime = 0;
+
+function takeTimeOff() {
+    // -10 seconds
+}
+function displayTime() {
+    // -10 seconds
+}
+
+
+
+
+
 
 // function questionClick() {
 //   // check if user guessed wrong
@@ -211,47 +246,6 @@ startQuizButton.addEventListener("click", function () {
 //     }
 // }
 
-
-
-
-
-
-
-
-// // Variables for timer
-// var secondsDisplay = document.querySelector("#seconds");
-// var question1 = document.querySelector("question1");
-// var totalSeconds = 60;
-// var interval;
-
-
-
-
-
-// function startTimer() {
-//     event.preventDefault();
-//     interval = setInterval(() => {
-//         document.getElementById("seconds").textContent = totalSeconds;
-//         if (totalSeconds < 1) {
-//             clearInterval(interval);
-//             alert("Time is up");
-//         } else {
-//             totalSeconds--;
-//         }
-//     }, 1000);
-// }
-
-// // when a wrong answer is selected, time -10 seconds ----- make this a function to call and edit the timer
-// // 
-
-// var gettime = 0;
-
-// function takeTimeOff() {
-//     // -10 seconds
-// }
-// function displayTime() {
-//     // -10 seconds
-// }
 
 
 
