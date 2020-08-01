@@ -1,162 +1,49 @@
-var startQuizButton = document.getElementById("startQuiz");
-var questionDisplay = document.getElementById("questionDisplay");
-var viewScores = document.getElementById("viewScores");
-var question = document.getElementById("question");
-var answer = document.getElementById("answers");
+// write in javascipt not jquery!
 
+// startQuiz button click function
 
-var questionBank = [{
-    question: "Commonly used data types do NOT include",
-    answer1: "alert",
-    choices: ["Alert", "boolean", "strings", "numbers"],
-    correctAnswer: "alert"
-},
-{
-    question: "The condition in an if/else statement is enclosed with ____.",
-    choices: ["curley brackets", "quotations", "square brackets", "parenthesis"],
-    correctAnswer: "parenthesis"
-},
-{
-    question: "Arrays in Javascript can be used to store ____.",
-    choices: ["more arrays", "boolean", "numbers and strings", "all of the above"],
-    correctAnswer: "all of the above"
-},
-{
-    question: "A very useful tool during development and debugging content that is for printing to the debugger is ________.",
-    choices: ["console.log", "loop", "javascript", "terminal | get bash"],
-    correctAnswer: "console.log"
-},
-{
-    question: "String values must be enclosed with ____ when being assigned to variables.",
-    choices: ["quotes", "curley brackets", "parethesis", "commas"],
-    correctAnswer: "quotes"
-}
-];
-
-startQuizButton.addEventListener("click", function () {
-    console.log("Start Quiz button works");
-    startTimer();
-    quizQuestions();
-});
-
-function quizQuestions() {
-    console.log("quizQuestions function works");
-    intro.replaceWith("");
-    startQuizButton.style.visibility= "hidden";
-    footer.replaceWith("Pick an answer.")
-    showQuiz();
-
-
-    function showQuiz() {
-
-        console.log("showQuiz function works");
-        // store out put and the anwer chocies
-        var displayQuestions = [];
-        var answersToBeDisplayed = "";
-        var QuestionNumber=0;
-
-        for (var i = 0; i < questionBank.length; i++) {
-            // for every question ....
-            console.log(questionBank[i].question);
-            question.replaceWith(questionBank[i].question);
-            var questionNumber = i;
-            let ans1 = answerbutton1.replaceWith(questionBank[i].correctAnswer);
-            console.log(ans1);
-
-
-
-
-
-
-
-
-
-            // for every question's answer
-            var answerFromQuestionsArray = Array.from(questionBank[i].choices);
-
-            for (var i = 0; i < answerFromQuestionsArray.length; i++) {
-                var answer1 = answerFromQuestionsArray[i];
-                console.log(answerFromQuestionsArray[i]);
-
-                
-            }
-
-            // userAnswer = document.getElementbyID("#answers").onClick("click", function(){
-            //     console.log("userAnswer works");
-            //     return this.answers;
-        }
-
-
-
-
-    }
+function startQuiz(){
+    console.log('hello');
 }
 
 
 
+        //  display question 1
 
 
 
 
 
-// Variables for timer
-var secondsDisplay = document.querySelector("#seconds");
-var question1 = document.querySelector("question1");
-var totalSeconds = 60;
-var interval;
+
+
+
+        // make buttons for question 1
 
 
 
 
 
-function startTimer() {
-    event.preventDefault();
-    interval = setInterval(() => {
-        document.getElementById("seconds").textContent = totalSeconds;
-        if (totalSeconds < 1) {
-            clearInterval(interval);
-            alert("Time is up");
-        } else {
-            totalSeconds--;
-        }
-    }, 1000);
-}
 
-// when a wrong answer is selected, time -10 seconds ----- make this a function to call and edit the timer
-// 
 
-var gettime = 0;
-
-function takeTimeOff() {
-    // -10 seconds
-}
-function displayTime() {
-    // -10 seconds
-}
+        // if correct
+            // +20points;
+             // then, go to next question
 
 
 
 
-function addName() {
-    // took this from class activities
-    // 1) make an array of objects
-    // 2) var highScoreArray = [];
-    // 3) add person to array
-    // 4) 
-}
 
-// View High Scores
-$("#ViewScores").on("click", function () {
-    event.preventDefault();
-    questionDisplay.replaceWith("View High Scores");
-    viewScores.setAttribute("visible");
-    let container = questionDisplay.createElement("container");
-    container.setAttribute("id= viewScoresContainer");
-    document.querySelector("#viewScoresContainer").innerHTML="testing";
-    // how to display a div class, or an string of html?
-    // is there a function to go back to the main page?
-    // localStorage.setItem(""); PLACE TO LOCAL STRAOGE
 
-    footer.replaceWith("");
+        // if wrong
+            // go to next question
 
-});
+// after you loop through all questions
+
+// display viewscores page
+// include a new class with the option to add current stored code into the high scroes
+
+// store to local storage
+
+
+startQuiz();
+

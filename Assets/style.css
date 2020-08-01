@@ -44,7 +44,8 @@ html, body{
 #answerbutton1,
 #answerbutton2,
 #answerbutton3,
-#answerbutton4{
+#answerbutton4,
+.button{
     visibility: hidden;
     border: solid 3px;
     background-origin: padding-box;
