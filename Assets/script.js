@@ -73,7 +73,7 @@ function quizQuestions() {
             console.log(questionBank[i].question);
             // DISPLAYS QUESTION
             question.replaceWith(questionBank[i].question);
-            var button1 = document.createElement("<button>");
+            var button1 = document.createElement("BUTTON");
             button1.innerHTML = questionBank[i].question;
             button1.set
 
