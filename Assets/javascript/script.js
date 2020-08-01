@@ -73,24 +73,28 @@ function quizQuestions() {
             console.log(questionBank[i].question);
             // DISPLAYS QUESTION
             question.replaceWith(questionBank[i].question);
+
+            // makes a button
             var button1 = document.createElement("BUTTON");
+            var button2 = document.createElement("BUTTON");
+            var button3 = document.createElement("BUTTON");
+            var button4 = document.createElement("BUTTON");
             button1.innerHTML = questionBank[i].question;
             button1.set
 
 
-
             // DISPLAYS ANSWER 1
-            var ans1 = answerbutton1.replaceWith(questionBank[i].answer1);
+            var ans1 = button1.replaceWith(questionBank[i].answer1);
             console.log(questionBank[i].answer1);
-            answerbutton1.style
+            // answerbutton1.style
             // DISPLAYS ANSWER 2
-            var ans2 = answerbutton2.replaceWith(questionBank[i].answer2);
+            var ans2 = button2.replaceWith(questionBank[i].answer2);
             console.log(questionBank[i].answer2);
             // DISPLAYS ANSWER 3
-            var ans3 = answerbutton3.replaceWith(questionBank[i].answer3);
+            var ans3 = button3.replaceWith(questionBank[i].answer3);
             console.log(questionBank[i].answer3);
             // DISPLAYS ANSWER 4
-            var ans4 = answerbutton4.replaceWith(questionBank[i].answer4);
+            var ans4 = button4.replaceWith(questionBank[i].answer4);
             console.log(questionBank[i].answer4);
 
                 
