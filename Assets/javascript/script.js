@@ -8,44 +8,6 @@ var answerbutton2 = document.getElementById("answerbutton2");
 var answerbutton3 = document.getElementById("answerbutton3");
 var answerbutton4 = document.getElementById("answerbutton4");
 
-
-var questionBank = [{
-    question: "Commonly used data types do NOT include",
-    answer1: "boolean",
-    answer2: "strings",
-    answer3: "numbers",
-    answer4:  "alert"
-},
-{
-    question: "The condition in an if/else statement is enclosed with ____.",
-    answer1: "parenthesis",
-    answer2: "curley brackets",
-    answer3: "square brackets",
-    answer4: "quotations"
-},
-{
-    question: "Arrays in Javascript can be used to store ____.",
-    answer1:"more arrays",
-    answer2: "boolean", 
-    answer3:"numbers and strings",
-    answer4: "all of the above"
-},
-{
-    question: "A very useful tool during development and debugging content that is for printing to the debugger is ________.",
-    answer1: "console.log", 
-    answer2: "loop",
-    answer3: "javascript", 
-    answer4: "terminal | get bash"
-},
-{
-    question: "String values must be enclosed with ____ when being assigned to variables.",
-    answer1: "quotes", 
-    answer2: "curley brackets", 
-    answer3: "parethesis", 
-    answer4: "commas"
-}
-];
-
 startQuizButton.addEventListener("click", function () {
     console.log("Start Quiz button works");
     startTimer();
