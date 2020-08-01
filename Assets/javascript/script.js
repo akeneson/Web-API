@@ -7,29 +7,32 @@ var time
 var timerId
 
 // variables to reference DOM elements
-
+var startScreen = document.getElementById("start-screen");
 
 function startQuiz() {
-  // hide start screen
+    // hide start screen
+    startScreen.replaceWith("");
 
-  // un-hide questions section
 
-  // start timer
 
-  // show starting time
+    // un-hide questions section
 
-  getQuestion()
+    // start timer
+
+    // show starting time
+
+    getQuestion()
 }
 
 function getQuestion() {
-  // get current question object from array stored in questions.js
-  var currentQuestion = questions[currentQuestionIndex]
+    // get current question object from array stored in questions.js
+    var currentQuestion = questions[currentQuestionIndex]
 
-  // update title with current question
+    // update title with current question
 
-  // clear out any old question choices
+    // clear out any old question choices
 
-  // loop over choices
+    // loop over choices
 
     // create new button for each choice
 
@@ -113,8 +116,9 @@ function getQuestion() {
 var startQuizButton = document.getElementById("start");
 startQuizButton.addEventListener("click", function () {
     console.log("Start Quiz button works");
-    startTimer();
-    quizQuestions();
+    // startTimer();
+    startQuiz();
+    // quizQuestions();
 });
 
 
@@ -186,8 +190,8 @@ startQuizButton.addEventListener("click", function () {
 //             var ans4 = button4.replaceWith(questionBank[i].answer4);
 //             console.log(questionBank[i].answer4);
 
-                
-            
+
+
 
 //             // userAnswer = document.getElementbyID("#answers").onClick("click", function(){
 //             //     console.log("userAnswer works");
