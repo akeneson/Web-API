@@ -8,26 +8,33 @@ var timerId
 
 // variables to reference DOM elements
 var startScreen = document.getElementById("start-screen");
+var questionSection = document.getElementById("questions");
 
 function startQuiz() {
-    // hide start screen
-    startScreen.replaceWith("");
-
+    // hide start screen----- This is the only way I can figure out to clear the screen
+    // startScreen.replaceWith("");
+    startScreen.className = "d-none";
 
 
     // un-hide questions section
+    questionSection.className = "questionSection";
+    console.log("questionSection to show");
+    getQuestion();
+
 
     // start timer
 
     // show starting time
 
-    getQuestion()
 }
 
 function getQuestion() {
     // get current question object from array stored in questions.js
-    var currentQuestion = questions[currentQuestionIndex]
-
+    // var currentQuestion = questions[currentQuestionIndex]
+    console.log(questions);
+    console.log(questionBank[0].question);
+    console.log(questionBank[0].choices[0]);
+    console.log(questionBank[0].answer);
     // update title with current question
 
     // clear out any old question choices
