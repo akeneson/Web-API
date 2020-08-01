@@ -8,12 +8,12 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
 
     <!-- Notice the link following the folder structure! -->
-    <link rel="stylesheet" href="/Assets/css/style.css" />
+    <link rel="stylesheet" href="Assets/css/style.css" />
   </head>
 
   <body>
     <div class="navbar">
-      <a href="highscores.html"><button class="btn btn-danger">View Highscores</button></a>
+      <a href="highscores.html"><button class="btn btn-secondary">View Highscores</button></a>
       
       <!-- The span is what you'll select to change the displayed time  -->
       <div class="timer">Time: <span id="time">0</span></div>
@@ -61,6 +61,6 @@
     <!-- IMPORTANT!!! -->
     <!-- Because of the way i wanted to organize my js i split it up into two files! I link in Questions first as a way to make the variable questions exist to the logic.js file. You'll see in logic.js i use questions but DONT declare it! that is become it is the variable from the questions.js file! BUT had i linked these the other way around the code would not have worked as the questions wouldnt have existed for the function! -->
     <script src="./Assets/javascript/questions.js"></script>
-    <script src="/Assets/javascript/script.js"></script>
+    <script src="Assets/javascript/script.js"></script>
   </body>
 </html>
