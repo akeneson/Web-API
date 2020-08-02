@@ -23,18 +23,36 @@ function startQuiz() {
 
     // start timer
     startTimer();
-    // show starting time
 
+    // show starting time
+    // changed in html to reflect starting timer
 }
 
 function getQuestion() {
     // get current question object from array stored in questions.js
     // var currentQuestion = questions[currentQuestionIndex]
+    var questionTitle = document.getElementById("question-title");
+
+
+    // 
+    console.log(questionTitle);
     console.log(questions);
     console.log(questionBank[0].question);
     console.log(questionBank[0].choices[0]);
     console.log(questionBank[0].answer);
     // update title with current question
+
+    for (var i = 0; i < questionBank.length; i++) {
+        console.log("for loop in getQuestion works");        
+        // for every question ....
+        var currentQuestion = questionBank[i].question;
+        console.log(currentQuestion);
+        questionTitle.innerHTML = currentQuestion;
+
+        // DISPLAYS QUESTION
+        // questionDisplay.append(questionBank[i].question);
+    }
+
 
     // clear out any old question choices
 
@@ -50,13 +68,13 @@ function getQuestion() {
 
 // Variables for timer
 var secondsDisplay = document.querySelector("#time");
-var totalSeconds = 60;
+var totalSeconds = 59;
 var interval;
 
 function startTimer() {
     event.preventDefault();
     interval = setInterval(() => {
-        secondsDisplay.textContent = totalSeconds;
+        secondsDisplay.textContent = (totalSeconds + " seconds");
         if (totalSeconds < 1) {
             clearInterval(interval);
             alert("Time is up");
