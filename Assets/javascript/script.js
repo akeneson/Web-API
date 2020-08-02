@@ -28,30 +28,97 @@ function startQuiz() {
     // changed in html to reflect starting timer
 }
 
+
+
 function getQuestion() {
     // get current question object from array stored in questions.js
     // var currentQuestion = questions[currentQuestionIndex]
     var questionTitle = document.getElementById("question-title");
+    var choicesDisplay = document.getElementById("choices");
+    var button1 = document.getElementById("button1");
+    var button2 = document.getElementById("button2");
+    var button3 = document.getElementById("button3");
+    var button4 = document.getElementById("button4");
+    
+    var score = 0;
+    var questionNumber = 0;
 
-
-    // 
+    // these console logs were done to test if I was calling for the object in the array correctly.
     console.log(questionTitle);
     console.log(questions);
     console.log(questionBank[0].question);
     console.log(questionBank[0].choices[0]);
     console.log(questionBank[0].answer);
+    console.log(choices);
     // update title with current question
 
-    for (var i = 0; i < questionBank.length; i++) {
-        console.log("for loop in getQuestion works");        
-        // for every question ....
-        var currentQuestion = questionBank[i].question;
-        console.log(currentQuestion);
-        questionTitle.innerHTML = currentQuestion;
+      
 
-        // DISPLAYS QUESTION
-        // questionDisplay.append(questionBank[i].question);
-    }
+        // for every question ....
+    var currentQuestion = questionBank[questionNumber].question;
+    console.log(questionNumber);
+    console.log(currentQuestion);
+    questionTitle.innerHTML = currentQuestion;
+        
+    button1ans = questionBank[questionNumber].choices[0];
+    button1.innerHTML = ("<label>" + questionBank[questionNumber].choices[0] + "</label>");
+    button2ans = questionBank[questionNumber].choices[1];
+    button2.innerHTML = ("<label>" + questionBank[questionNumber].choices[1] + "</label>");
+    button3ans = questionBank[questionNumber].choices[2];
+    button3.innerHTML = ("<label>" + questionBank[questionNumber].choices[2] + "</label>");
+    button4ans = questionBank[questionNumber].choices[3];
+    button4.innerHTML = ("<label>" + questionBank[questionNumber].choices[3] + "</label>");
+
+    console.log(button1ans);
+
+    $("#button1").on("click", function () {
+        if (button1ans == toString(questionBank[questionNumber].answer))
+        {
+            score= score+20;
+            console.log(score);
+        } else {
+            score= score;
+            console.log(score);
+        }
+    });
+    $("#button2").on("click", function () {
+        if (button2ans == toString(questionBank[questionNumber].answer))
+        {
+            score= score+20;
+            console.log(score);
+        } else {
+            console.log(score);
+        }
+    });
+    $("#button3").on("click", function () {
+        if (button3ans == toString(questionBank[questionNumber].answer))
+        {
+            score= score+20;
+            console.log(score);
+        } else {
+            console.log(score);
+        }
+    });
+    $("#button4").on("click", function () {
+        if (button4ans == toString(questionBank[questionNumber].answer))
+        {
+            score= score+20;
+            console.log(score);
+        } else {
+            console.log(score);
+        }
+    });
+
+    // questionNumber++;
+    
+    // if (questionNumber > questionBank.length){
+    //     return;
+    // } else {
+    //     getQuestion();
+    // }
+
+
+    
 
 
     // clear out any old question choices
