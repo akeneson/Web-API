@@ -40,7 +40,7 @@ function getQuestion() {
     var button3 = document.getElementById("button3");
     var button4 = document.getElementById("button4");
     
-    var score = 0;
+    var currentScore = 0;
     var questionNumber = 0;
 
     // these console logs were done to test if I was calling for the object in the array correctly.
@@ -69,12 +69,19 @@ function getQuestion() {
     button4ans = questionBank[questionNumber].choices[3];
     button4.innerHTML = ("<label>" + questionBank[questionNumber].choices[3] + "</label>");
 
+    var questionAnswer = questionBank[questionNumber].answer;
+    
+
     console.log(button1ans);
+    console.log(button2ans);
+    console.log(button3ans);
+    console.log(button4ans);
+    console.log(questionAnswer);
 
     $("#button1").on("click", function () {
-        if (button1ans == toString(questionBank[questionNumber].answer))
+        if ((toString(button2ans)) === toString(questionBank[questionNumber].answer))
         {
-            score= score+20;
+            var score= score +20;
             console.log(score);
         } else {
             score= score;
@@ -82,30 +89,32 @@ function getQuestion() {
         }
     });
     $("#button2").on("click", function () {
-        if (button2ans == toString(questionBank[questionNumber].answer))
+        if ((toString(button2ans)) === toString(questionBank[questionNumber].answer))
         {
-            score= score+20;
+            var score= score +20;
             console.log(score);
         } else {
             console.log(score);
         }
     });
     $("#button3").on("click", function () {
-        if (button3ans == toString(questionBank[questionNumber].answer))
+        if ((toString(button2ans)) === toString(questionBank[questionNumber].answer))
         {
-            score= score+20;
+            var score= score +20;
             console.log(score);
         } else {
             console.log(score);
         }
     });
     $("#button4").on("click", function () {
-        if (button4ans == toString(questionBank[questionNumber].answer))
+        if ((toString(button2ans)) === toString(questionBank[questionNumber].answer))
         {
-            score= score+20;
+           score=+20;
             console.log(score);
         } else {
-            console.log(score);
+            questionNumber++
+            getQuestion();
+            console.log("clicked the right answer");
         }
     });
 
