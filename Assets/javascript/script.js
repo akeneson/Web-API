@@ -33,7 +33,7 @@ function startQuiz() {
 function getQuestion() {
     // get current question object from array stored in questions.js
     // var currentQuestion = questions[currentQuestionIndex]
-    var questionTitle = document.getElementById("question-title");
+    var questionTitle = document.getElementById("questionTitle");
     var choicesDisplay = document.getElementById("choices");
     var button1 = document.getElementById("button1");
     var button2 = document.getElementById("button2");
@@ -44,12 +44,9 @@ function getQuestion() {
     var questionNumber = 0;
 
     // these console logs were done to test if I was calling for the object in the array correctly.
-    console.log(questionTitle);
-    console.log(questions);
     console.log(questionBank[0].question);
     console.log(questionBank[0].choices[0]);
     console.log(questionBank[0].answer);
-    console.log(choices);
     // update title with current question
 
       
