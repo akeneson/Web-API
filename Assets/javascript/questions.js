@@ -17,8 +17,8 @@ var questionBank = [{
 },
 {
     question: "Arrays in Javascript can be used to store ____.",
-    choices: ["more arrays", "boolean", "numbers and strings", "all of the above"],
-    answer: "all of the above"
+    choices: ["more arrays", "boolean", "numbers and strings", "alloftheabove"],
+    answer: "alloftheabove"
 },
 {
     question: "A very useful tool during development and debugging content that is for printing to the debugger is ________.",

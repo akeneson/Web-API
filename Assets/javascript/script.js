@@ -1,6 +1,7 @@
 // variables to keep track of quiz state
 // Tracks current question
-var currentQuestionIndex
+var currentScore = 0;
+var questionNumber = 0;
 // Tracks time as an number
 var time
 // Will hold the interval function
@@ -9,6 +10,7 @@ var timerId
 // variables to reference DOM elements
 var startScreen = document.getElementById("start-screen");
 var questionSection = document.getElementById("questions");
+
 
 function startQuiz() {
     // hide start screen----- This is the only way I can figure out to clear the screen
@@ -40,8 +42,6 @@ function getQuestion() {
     var button3 = document.getElementById("button3");
     var button4 = document.getElementById("button4");
     
-    var currentScore = 0;
-    var questionNumber = 0;
 
     // these console logs were done to test if I was calling for the object in the array correctly.
     console.log(questionBank[0].question);
@@ -49,7 +49,9 @@ function getQuestion() {
     console.log(questionBank[0].answer);
     // update title with current question
 
-      
+    if (questionNumber>4){
+        return;
+    }
 
         // for every question ....
     var currentQuestion = questionBank[questionNumber].question;
@@ -75,67 +77,85 @@ function getQuestion() {
     console.log(button4ans);
     console.log(questionAnswer);
 
+   
+
     $("#button1").on("click", function () {
         if ((toString(button2ans)) === toString(questionBank[questionNumber].answer))
         {
-            var score= score +20;
-            console.log(score);
+            currentScore=+20;
+            console.log(currentScore);
+            questionNumber++;
+            console.log(questionNumber);
+            console.log("clicked the right answer");
+            getQuestion();
         } else {
-            score= score;
-            console.log(score);
+            currentScore=-20;
+            totalSeconds=-10;
+            console.log(currentScore);
+            questionNumber++;
+            console.log(questionNumber);
+            console.log("clicked the wrong answer");
+            getQuestion();
         }
     });
     $("#button2").on("click", function () {
         if ((toString(button2ans)) === toString(questionBank[questionNumber].answer))
         {
-            var score= score +20;
-            console.log(score);
+            currentScore=+20;
+            console.log(currentScore);
+            questionNumber++;
+            console.log(questionNumber);
+            console.log("clicked the right answer");
+            getQuestion();
         } else {
-            console.log(score);
+            currentScore=-20;
+            totalSeconds=-10;
+            console.log(currentScore);
+            questionNumber++;
+            console.log(questionNumber);
+            console.log("clicked the wrong answer");
+            getQuestion();
         }
     });
     $("#button3").on("click", function () {
         if ((toString(button2ans)) === toString(questionBank[questionNumber].answer))
         {
-            var score= score +20;
-            console.log(score);
+            currentScore=+20;
+            console.log(currentScore);
+            questionNumber++;
+            console.log(questionNumber);
+            console.log("clicked the right answer");
+            getQuestion();
         } else {
-            console.log(score);
+            currentScore=-20;
+            totalSeconds=-10;
+            console.log(currentScore);
+            questionNumber++;
+            console.log(questionNumber);
+            console.log("clicked the wrong answer");
+            getQuestion();
         }
     });
     $("#button4").on("click", function () {
         if ((toString(button2ans)) === toString(questionBank[questionNumber].answer))
         {
-           score=+20;
-            console.log(score);
-        } else {
-            questionNumber++
-            getQuestion();
+            currentScore=+20;
+            console.log(currentScore);
+            questionNumber++;
+            console.log(questionNumber);
             console.log("clicked the right answer");
+            getQuestion();
+        } else {
+            currentScore=-20;
+            totalSeconds=-10
+            console.log(currentScore);
+            questionNumber++;
+            console.log(questionNumber);
+            console.log("clicked the wrong answer");
+            getQuestion();
         }
     });
 
-    // questionNumber++;
-    
-    // if (questionNumber > questionBank.length){
-    //     return;
-    // } else {
-    //     getQuestion();
-    // }
-
-
-    
-
-
-    // clear out any old question choices
-
-    // loop over choices
-
-    // create new button for each choice
-
-    // attach click event listener to each choice
-
-    // display on the page
 }
 
 
@@ -168,10 +188,6 @@ function takeTimeOff() {
 function displayTime() {
     // -10 seconds
 }
-
-
-
-
 
 
 // function questionClick() {
@@ -253,13 +269,6 @@ startQuizButton.addEventListener("click", function () {
     startQuiz();
     // quizQuestions();
 });
-
-
-
-
-
-
-
 
 
 
